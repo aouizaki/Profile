@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--primary-color);
+}
+:root{
+    --primary-color:white;
+    --secondary-color:black;
+}
+.dark-theme{
+    --primary-color:rgb(0, 0, 0);
+    --secondary-color:rgb(255, 255, 255);
+}
+img.logo{
+    margin-left: 10px;
+    margin-top: 12px;
+}
+#icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 10px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+}
+ul li a{
+    color: var(--secondary-color);
+    padding: 14px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+ul li a:hover{
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 22px;
+}
+span{
+    color: orangered;
+}
+.info{
+    display: block;
+    padding: 300px 40px 0;
+}
+h1{
+    color: var(--secondary-color);
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+p{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: var(--secondary-color);
+    word-spacing: 2px;
+}
+.links{
+    margin-left: 50px;
+}
+
+@media (max-width:1024px){
+    ul li a {
+        opacity: 0;
+    }
+    #icon{
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        display: block;
+        cursor: pointer;
+    }
+    img.logo{
+        margin-left: 2px;
+        margin-top: 1px;
+    }
+    
+}
+
+
+h1{
+    color: transparent;
+    letter-spacing: 3px;
+    position: relative;
+    font-size: 47px;
+    font-weight: bold;
+    -webkit-text-stroke: 0.3vw transparent;
+  }
+  h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: var(--secondary-color);
+    -webkit-text-stroke: 0vw black;
+    border-right: 4px solid orangered;
+    overflow: hidden;
+    animation: animate 4.5s linear infinite;
+  }
+  @keyframes animate{
+    0%,10%,100%{
+      width: 0;
+    }
+    70%,90%{
+      width: 50%;
+    }
+  }
