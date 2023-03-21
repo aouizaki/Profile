@@ -9,6 +9,7 @@
 }
 body{
     background-color: var(--primary-color);
+    hight: 100vh;
 }
 :root{
     --primary-color:white;
